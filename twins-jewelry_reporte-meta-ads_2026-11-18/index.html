@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twins Jewelry · Reporte Meta Ads · 2026-11-18</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one-column client report on Twins' paper, sections in reading order: results, what worked, who wrote, from message to sale, next steps. */
+:root {
+  --paper: #f4ede0; --card: #fbf7ef; --ink: #1a1408; --muted: #6e6352; --line: #e2d7c2;
+  --gold: #a87a26; --gold-2: #d9b56a; --gold-soft: #efe0bd; --good: #2e7d4f; --bad: #b04a2f; --us: #6f86a8;
+  --display: "Bodoni Moda", "Bodoni MT", Georgia, serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #15110a; --card: #1e1810; --ink: #f1e8d6; --muted: #b3a68f; --line: #3a3021;
+  --gold: #e0b866; --gold-2: #b8862f; --gold-soft: #3a2d15; --good: #6cc792; --bad: #e7896d; --us: #93a9cb; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #15110a; --card: #1e1810; --ink: #f1e8d6; --muted: #b3a68f; --line: #3a3021;
+  --gold: #e0b866; --gold-2: #b8862f; --gold-soft: #3a2d15; --good: #6cc792; --bad: #e7896d; --us: #93a9cb; color-scheme: dark }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 40px 70px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 44px; }
+h1, h2 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.02; }
+h2 { font-size: clamp(24px, 3.6vw, 32px); line-height: 1.1; }
+p { margin: 0; max-width: 66ch; }
+.label { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+header { display: grid; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 22px; }
+header .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; color: var(--muted); }
+section { display: grid; gap: 16px; }
+.lead { font-size: 20px; line-height: 1.5; max-width: 60ch; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.kpi { background: var(--card); padding: 18px 18px 16px; display: grid; gap: 4px; }
+.kpi .v { font-family: var(--display); font-size: 34px; font-weight: 700; line-height: 1; }
+.kpi .v.gold { color: var(--gold); }
+.kpi .l { font-size: 14px; color: var(--muted); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 14px; min-width: 0; }
+.chart { width: 100%; overflow: visible; display: block; }
+.chart text { font-family: var(--body); fill: var(--muted); font-size: 12px; }
+.chart .val { fill: var(--ink); font-family: var(--mono); font-size: 12px; }
+.chart .lbl { fill: var(--ink); font-size: 13px; }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--paper); font-size: 13px; padding: 6px 9px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -115%); }
+.chartbox { position: relative; }
+.ads { display: grid; gap: 10px; }
+.adrow { display: grid; grid-template-columns: 26px minmax(0, 1.6fr) minmax(0, 2fr) 92px; gap: 14px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.adrow:last-child { border-bottom: 0; }
+.adrow .rank { font-family: var(--display); font-size: 22px; color: var(--gold); }
+.adrow .name { font-weight: 600; }
+.adrow .sub { font-size: 14px; color: var(--muted); }
+.adrow .cost { text-align: right; }
+.adrow .cost b { font-family: var(--mono); font-size: 18px; }
+.track { height: 10px; background: var(--paper); border-radius: 5px; overflow: hidden; }
+.track span { display: block; height: 100%; background: var(--gold-2); border-radius: 5px; }
+.split { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.big { font-family: var(--display); font-size: 40px; font-weight: 700; line-height: 1; }
+.pill { justify-self: start; display: inline-block; font-size: 13px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--gold-soft); color: var(--gold); }
+.funnel { display: grid; gap: 8px; }
+.fstep { display: grid; grid-template-columns: minmax(0, 1fr) 90px; gap: 12px; align-items: center; }
+.fbar { height: 34px; border-radius: 6px; background: var(--gold-soft); display: flex; align-items: center; padding: 0 12px; font-weight: 600; font-size: 15px; min-width: 0; white-space: nowrap; overflow: hidden; }
+.fbar.dark { background: var(--gold-2); color: #1a1408; }
+.fstep .n { text-align: right; font-family: var(--mono); font-size: 18px; }
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 14px; }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
+ol.steps li::before { content: counter(s); font-family: var(--display); font-size: 26px; color: var(--gold); line-height: 1.1; }
+ol.steps b { display: block; }
+.note { font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+@media (max-width: 560px) { .adrow { grid-template-columns: 22px minmax(0, 1fr) 80px; } .adrow .bar { grid-column: 2 / -1; } .kpi .v { font-size: 28px; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="label">Twins Jewelry · Reporte de campaña</div>
+    <h1>Navidad 2026: regalos en oro real por WhatsApp</h1>
+    <div class="meta"><span>Del 5 al 18 de noviembre de 2026</span><span>Facebook, Instagram y WhatsApp</span><span>Preparado por LezaTech</span></div>
+  </header>
+
+  <section id="resumen">
+    <p class="lead">En dos semanas la campaña trajo <b class="num">767</b> conversaciones de WhatsApp a <b class="num">$2.46</b> cada una. Es la campaña más eficiente que ha tenido Twins: cada conversación cuesta un <b>36% menos</b> que en la mejor campaña anterior.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="v num">$1,887</div><div class="l">invertidos en 14 días</div></div>
+      <div class="kpi"><div class="v num">767</div><div class="l">conversaciones de WhatsApp</div></div>
+      <div class="kpi"><div class="v gold num">$2.46</div><div class="l">por conversación</div></div>
+      <div class="kpi"><div class="v num">99,885</div><div class="l">personas vieron los anuncios</div></div>
+      <div class="kpi"><div class="v num">~55</div><div class="l">conversaciones nuevas al día</div></div>
+    </div>
+  </section>
+
+  <section id="comparacion">
+    <div class="label">Frente a campañas anteriores</div>
+    <h2>La conversación más barata que ha pagado Twins</h2>
+    <div class="card"><div class="chartbox" id="cmpBox"></div>
+      <p class="muted" style="font-size:14px">Costo por conversación de WhatsApp de cada campaña, según Meta.</p></div>
+  </section>
+
+  <section id="diario">
+    <div class="label">Día a día</div>
+    <h2>Un ritmo estable desde la primera semana</h2>
+    <p>Después de dos días de arranque, la campaña trae entre 55 y 87 conversaciones al día. La segunda semana salió un poco más barata que la primera ($2.40 contra $2.52 por conversación), así que los anuncios todavía no se están cansando.</p>
+    <div class="card"><div class="chartbox" id="dayBox"></div>
+      <p class="muted" style="font-size:14px">Barras: conversaciones por día. Línea: costo por conversación.</p></div>
+  </section>
+
+  <section id="anuncios">
+    <div class="label">Qué anuncio funcionó mejor</div>
+    <h2>"Con su nombre" trae más de la mitad de las conversaciones</h2>
+    <p>El estático de cadenas con nombre consiguió 427 conversaciones a $2.00 cada una. Le sigue el reel que abre con el precio. Los dos anuncios que menos rinden cuestan casi el doble por conversación.</p>
+    <div class="card ads" id="adList"></div>
+  </section>
+
+  <section id="publico">
+    <div class="label">Quién escribe</div>
+    <h2>Mujeres de 35 años en adelante, y sobre todo en Puerto Rico</h2>
+    <div class="split">
+      <div class="card">
+        <span class="pill">Dónde</span>
+        <div><span class="big num">65%</span> <span class="muted">de las conversaciones vienen de Puerto Rico</span></div>
+        <div class="chartbox" id="geoBox"></div>
+        <p style="font-size:15px">En Puerto Rico cada conversación cuesta <b class="num">$2.16</b>; en el resto de EE. UU., <b class="num">$3.03</b>. Florida es el estado donde más se invierte dentro de EE. UU. ($209).</p>
+      </div>
+      <div class="card">
+        <span class="pill">Quién</span>
+        <div><span class="big num">65%</span> <span class="muted">son mujeres de 35 años o más</span></div>
+        <div class="chartbox" id="ageBox"></div>
+        <p style="font-size:15px">Las mujeres de 65+ son las más baratas de todas: <b class="num">$1.66</b> por conversación. Los hombres escriben menos y cuestan más.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ventas">
+    <div class="label">Del mensaje a la venta</div>
+    <h2>Llegan muchos clientes; ahora hay que medir cuántos compran</h2>
+    <p>Del 5 al 16 de noviembre entraron 663 clientes nuevos al CRM. Casi todos reciben respuesta, pero la mitad espera más de dos horas y media, y la mayoría de las conversaciones no se ha marcado con su resultado. Sin eso no podemos decir cuánto cuesta cada venta.</p>
+    <div class="card funnel" id="funnel"></div>
+    <p class="muted" style="font-size:14px">Fuente: CRM de Twins (oportunidades del pipeline "Meta Campaign"). Los tiempos de respuesta son de los leads del 9 al 15 de noviembre.</p>
+  </section>
+
+  <section id="pasos">
+    <div class="label">Próximos pasos</div>
+    <h2>Lo que recomendamos para las próximas semanas</h2>
+    <ol class="steps">
+      <li><div><b>Darle más espacio a "Con su nombre".</b>Es el anuncio que mejor convierte. Vamos a preparar dos versiones nuevas con el mismo mensaje (nombre en oro y precio) para que no se canse antes de Navidad.</div></li>
+      <li><div><b>Renovar los dos anuncios más caros.</b>"Que no se pongan negras" y la escalera de precios cuestan entre $3.16 y $3.63 por conversación. Los reemplazamos por piezas con precio visible, que es lo que mejor funciona.</div></li>
+      <li><div><b>Confirmar cuánto se vende en Puerto Rico.</b>Dos de cada tres conversaciones vienen de la isla. Si esas clientas compran (envío y pago incluidos), conviene darles su propio presupuesto. Si no, movemos esa inversión a Florida.</div></li>
+      <li><div><b>Contestar en los primeros 5 minutos.</b>Hoy la mitad de los clientes espera más de dos horas y media. En diciembre, que es cuando más se compra, cada hora de espera es una venta que se va a otra tienda.</div></li>
+      <li><div><b>Marcar cada conversación en el CRM.</b>Que el equipo pase cada cliente a "Cotización enviada", "Vendido" o "No interesado". Así el próximo reporte mostrará cuánto cuesta cada venta y qué anuncio vende más, no solo cuál trae más mensajes.</div></li>
+    </ol>
+  </section>
+
+  <div class="note">
+    <div>Datos de Meta Ads (cuenta Las Mellizas Joyería), campaña "Navidad 2026 · Regalos en oro real · WhatsApp", del 5 al 18 de noviembre de 2026. Una conversación es un chat de WhatsApp iniciado desde un anuncio. Meta no reporta conversaciones por ciudad, solo por país.</div>
+    <div>Campañas anteriores: Interacción (jun 2025), Ventas (sep 2025) y las dos de enero 2026, con sus resultados totales según Meta.</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const NS = "http://www.w3.org/2000/svg";
+  const s = (tag, a, txt) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; return e; };
+  const money = (v) => "$" + v.toFixed(2);
+
+  const CMP = [
+    { n: "Interacción · jun 2025", v: 5.25, c: 220 },
+    { n: "Enero 7646 · 2026", v: 4.72, c: 89 },
+    { n: "Enero 7575 · 2026", v: 4.37, c: 102 },
+    { n: "Ventas · sep 2025", v: 3.82, c: 1696 },
+    { n: "Navidad 2026", v: 2.46, c: 767, now: true }
+  ];
+  const DAYS = [["5", 21.92, 11], ["6", 126.55, 59], ["7", 140.03, 70], ["8", 54.25, 24], ["9", 211.40, 55], ["10", 204.91, 80], ["11", 161.57, 66],
+                ["12", 138.22, 65], ["13", 151.17, 57], ["14", 126.02, 59], ["15", 148.97, 63], ["16", 122.99, 40], ["17", 207.87, 87], ["18", 70.69, 31]];
+  const ADS = [
+    { n: "Estático · Con su nombre", f: "Imagen", sp: 854.86, c: 427 },
+    { n: "Reel · Gancho de precio", f: "Video", sp: 364.42, c: 140 },
+    { n: "Estático · Escalera de precios", f: "Imagen", sp: 419.77, c: 133 },
+    { n: "Reel · \"Que no se pongan negras\"", f: "Video", sp: 242.91, c: 67 },
+    { n: "Carrusel animado · 8 tarjetas", f: "Carrusel", sp: 4.60, c: 0 }
+  ];
+  const AGES = [["18-24", 17, 8], ["25-34", 65, 54], ["35-44", 123, 47], ["45-54", 134, 32], ["55-64", 138, 16], ["65+", 106, 13]];
+
+  function tipFor(box) { const t = document.createElement("div"); t.className = "tip"; t.hidden = true; box.append(t); return (x, y, text) => { if (text == null) { t.hidden = true; return; } t.hidden = false; t.textContent = text; t.style.left = x + "px"; t.style.top = y + "px"; }; }
+
+  function drawCmp() {
+    const box = document.getElementById("cmpBox"); box.textContent = "";
+    const W = box.clientWidth, rowH = 38, L = Math.min(190, W * 0.42), R = 56, H = CMP.length * rowH + 4;
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, height: H, role: "img", "aria-label": "Costo por conversación por campaña" });
+    const max = 5.5, sc = (W - L - R) / max;
+    const tip = tipFor(box);
+    CMP.forEach((d, i) => {
+      const y = i * rowH + 6;
+      svg.append(s("text", { x: L - 10, y: y + 17, "text-anchor": "end", class: "lbl", "font-weight": d.now ? 700 : 400 }, d.n));
+      const r = s("rect", { x: L, y, width: Math.max(2, d.v * sc), height: 24, rx: 4, fill: d.now ? css("--gold") : css("--line") });
+      r.addEventListener("mousemove", (e) => { const b = box.getBoundingClientRect(); tip(e.clientX - b.left, e.clientY - b.top, `${d.n}: ${money(d.v)} · ${d.c.toLocaleString("es")} conversaciones`); });
+      r.addEventListener("mouseleave", () => tip());
+      svg.append(r, s("text", { x: L + d.v * sc + 8, y: y + 17, class: "val", "font-weight": d.now ? 700 : 400 }, money(d.v)));
+    });
+    box.append(svg);
+  }
+
+  function drawDays() {
+    const box = document.getElementById("dayBox"); box.textContent = "";
+    const W = box.clientWidth, H = 240, P = { l: 34, r: 40, t: 16, b: 26 };
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, height: H, role: "img", "aria-label": "Conversaciones y costo por día" });
+    const iw = W - P.l - P.r, ih = H - P.t - P.b, bw = iw / DAYS.length;
+    const maxC = 100, maxCost = 5;
+    [0, 25, 50, 75, 100].forEach(v => { const y = P.t + ih - v / maxC * ih; svg.append(s("line", { x1: P.l, x2: W - P.r, y1: y, y2: y, stroke: css("--line") }), s("text", { x: P.l - 6, y: y + 4, "text-anchor": "end" }, v)); });
+    [0, 2.5, 5].forEach(v => { const y = P.t + ih - v / maxCost * ih; svg.append(s("text", { x: W - P.r + 6, y: y + 4 }, "$" + v)); });
+    const tip = tipFor(box); let pts = [];
+    DAYS.forEach((d, i) => {
+      const x = P.l + i * bw, h = d[2] / maxC * ih, cost = d[1] / d[2];
+      const r = s("rect", { x: x + bw * 0.18, y: P.t + ih - h, width: bw * 0.64, height: h, rx: 2, fill: css("--gold-2") });
+      r.addEventListener("mousemove", (e) => { const b = box.getBoundingClientRect(); tip(e.clientX - b.left, e.clientY - b.top, `${d[0]} nov: ${d[2]} conversaciones · ${money(cost)} c/u · $${d[1].toFixed(0)} invertidos`); });
+      r.addEventListener("mouseleave", () => tip());
+      svg.append(r);
+      if (i % 2 === 0 || bw > 34) svg.append(s("text", { x: x + bw / 2, y: H - 8, "text-anchor": "middle" }, d[0]));
+      pts.push([x + bw / 2, P.t + ih - cost / maxCost * ih, cost]);
+    });
+    svg.append(s("polyline", { points: pts.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "none", stroke: css("--ink"), "stroke-width": 2 }));
+    const last = pts[pts.length - 1]; svg.append(s("circle", { cx: last[0], cy: last[1], r: 4, fill: css("--ink") }));
+    svg.append(s("text", { x: P.l, y: H - 8 + 0, "text-anchor": "start", opacity: 0 }, ""));
+    box.append(svg);
+  }
+
+  function drawAds() {
+    const el = document.getElementById("adList"); el.textContent = "";
+    const maxC = Math.max(...ADS.map(a => a.c));
+    ADS.forEach((a, i) => {
+      const row = document.createElement("div"); row.className = "adrow";
+      const rank = document.createElement("div"); rank.className = "rank"; rank.textContent = i + 1;
+      const name = document.createElement("div"); name.innerHTML = ""; const n1 = document.createElement("div"); n1.className = "name"; n1.textContent = a.n;
+      const n2 = document.createElement("div"); n2.className = "sub"; n2.textContent = a.c ? `${a.f} · ${a.c} conversaciones · $${a.sp.toFixed(0)} invertidos` : `${a.f} · Meta casi no lo mostró ($${a.sp.toFixed(2)})`; name.append(n1, n2);
+      const bar = document.createElement("div"); bar.className = "bar"; const tr = document.createElement("div"); tr.className = "track"; const sp = document.createElement("span"); sp.style.width = (a.c / maxC * 100) + "%"; tr.append(sp); bar.append(tr);
+      const cost = document.createElement("div"); cost.className = "cost"; const b = document.createElement("b"); b.textContent = a.c ? money(a.sp / a.c) : "—"; const sm = document.createElement("div"); sm.className = "sub"; sm.textContent = "por conversación"; cost.append(b, sm);
+      row.append(rank, name, bar, cost); el.append(row);
+    });
+  }
+
+  function drawGeo() {
+    const box = document.getElementById("geoBox"); box.textContent = "";
+    const W = box.clientWidth, H = 54, tot = 767, pr = 500;
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, height: H, role: "img", "aria-label": "Conversaciones por país" });
+    const w1 = pr / tot * W;
+    svg.append(s("rect", { x: 0, y: 4, width: w1 - 2, height: 22, rx: 4, fill: css("--gold") }), s("rect", { x: w1, y: 4, width: W - w1, height: 22, rx: 4, fill: css("--us") }));
+    svg.append(s("text", { x: 0, y: 46, class: "lbl" }, "Puerto Rico · 500"), s("text", { x: W, y: 46, "text-anchor": "end", class: "lbl" }, "EE. UU. · 267"));
+    box.append(svg);
+  }
+
+  function drawAges() {
+    const box = document.getElementById("ageBox"); box.textContent = "";
+    const W = box.clientWidth, rowH = 26, L = 52, H = AGES.length * rowH + 22;
+    const svg = s("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, height: H, role: "img", "aria-label": "Conversaciones por edad y sexo" });
+    const max = 160, sc = (W - L - 40) / max;
+    AGES.forEach((d, i) => {
+      const y = i * rowH;
+      svg.append(s("text", { x: L - 8, y: y + 15, "text-anchor": "end" }, d[0]));
+      svg.append(s("rect", { x: L, y: y + 3, width: d[1] * sc, height: 16, rx: 3, fill: css("--gold") }));
+      svg.append(s("rect", { x: L + d[1] * sc + 2, y: y + 3, width: d[2] * sc, height: 16, rx: 3, fill: css("--us") }));
+      svg.append(s("text", { x: L + (d[1] + d[2]) * sc + 8, y: y + 15, class: "val" }, d[1] + d[2]));
+    });
+    const ly = AGES.length * rowH + 14;
+    svg.append(s("rect", { x: L, y: ly - 9, width: 10, height: 10, rx: 2, fill: css("--gold") }), s("text", { x: L + 15, y: ly }, "Mujeres"),
+               s("rect", { x: L + 80, y: ly - 9, width: 10, height: 10, rx: 2, fill: css("--us") }), s("text", { x: L + 95, y: ly }, "Hombres"));
+    box.append(svg);
+  }
+
+  function drawFunnel() {
+    const el = document.getElementById("funnel"); el.textContent = "";
+    const steps = [["Clientes nuevos en el CRM (5–16 nov)", 663, 100, true], ["Recibieron respuesta del equipo", "95%", 95], ["Respondidos en la primera hora", "1 de 3", 34],
+                   ["Movidos de \"Nueva Oportunidad\" a otra etapa", 51, 8], ["Marcados como vendidos", 2, 1]];
+    steps.forEach(([t, n, w, dark]) => {
+      const r = document.createElement("div"); r.className = "fstep";
+      const b = document.createElement("div"); b.className = "fbar" + (dark ? " dark" : ""); b.style.width = Math.max(w, 62) + "%"; b.textContent = t;
+      const v = document.createElement("div"); v.className = "n"; v.textContent = n;
+      r.append(b, v); el.append(r);
+    });
+  }
+
+  function all() { drawCmp(); drawDays(); drawAds(); drawGeo(); drawAges(); drawFunnel(); }
+  all();
+  let t; window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(all, 150); });
+  if (window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener("change", all);
+})();
+</script>
+
+</html>

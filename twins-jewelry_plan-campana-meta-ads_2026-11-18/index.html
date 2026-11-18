@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twins Jewelry · Plan de campaña Meta Ads · 2026-11-18</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one-column plan on Twins' paper, in the order a decision is made: why, the offer, structure and budget, ads, sales team, how we measure, calendar, what we need from Twins. */
+:root {
+  --paper: #f4ede0; --card: #fbf7ef; --ink: #1a1408; --muted: #6e6352; --line: #e2d7c2;
+  --gold: #a87a26; --gold-2: #d9b56a; --gold-soft: #efe0bd; --good: #2e7d4f; --good-soft: #dcefe2; --bad: #b04a2f; --bad-soft: #f6e0d8; --us: #6f86a8;
+  --display: "Bodoni Moda", "Bodoni MT", Georgia, serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #15110a; --card: #1e1810; --ink: #f1e8d6; --muted: #b3a68f; --line: #3a3021;
+  --gold: #e0b866; --gold-2: #b8862f; --gold-soft: #3a2d15; --good: #6cc792; --good-soft: #17301f; --bad: #e7896d; --bad-soft: #3a1f17; --us: #93a9cb; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #15110a; --card: #1e1810; --ink: #f1e8d6; --muted: #b3a68f; --line: #3a3021;
+  --gold: #e0b866; --gold-2: #b8862f; --gold-soft: #3a2d15; --good: #6cc792; --good-soft: #17301f; --bad: #e7896d; --bad-soft: #3a1f17; --us: #93a9cb; color-scheme: dark }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 900px; margin: 0 auto; padding-block: 40px 70px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 46px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.02; }
+h2 { font-size: clamp(24px, 3.6vw, 32px); line-height: 1.1; }
+h3 { font-size: 20px; }
+p { margin: 0; max-width: 68ch; }
+.label { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+header { display: grid; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 22px; }
+header .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; color: var(--muted); }
+section { display: grid; gap: 16px; }
+.lead { font-size: 20px; line-height: 1.5; max-width: 62ch; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 12px; min-width: 0; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.kpi { background: var(--card); padding: 18px; display: grid; gap: 4px; }
+.kpi .v { font-family: var(--display); font-size: 32px; font-weight: 700; line-height: 1; }
+.kpi .v.gold { color: var(--gold); }
+.kpi .l { font-size: 14px; color: var(--muted); }
+ul.clean { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.pill { justify-self: start; display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; padding: 2px 9px; border-radius: 999px; background: var(--gold-soft); color: var(--gold); }
+.pill.keep { background: var(--good-soft); color: var(--good); } .pill.drop { background: var(--bad-soft); color: var(--bad); }
+.learn { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: start; }
+.learn .ix { font-family: var(--display); font-size: 26px; color: var(--gold); line-height: 1; }
+.offer { border: 2px solid var(--gold); background: var(--card); border-radius: 12px; padding: 22px; display: grid; gap: 10px; }
+.offer .big { font-family: var(--display); font-size: clamp(24px, 4vw, 34px); font-weight: 700; line-height: 1.15; }
+.tblwrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 15px; }
+th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding: 10px 14px; border-bottom: 1px solid var(--line); }
+td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td .num { white-space: nowrap; }
+.ad { display: grid; gap: 8px; }
+.ad .t { font-family: var(--display); font-size: 19px; font-weight: 700; }
+.ad .hook { font-weight: 600; }
+.ad .meta { font-size: 14px; color: var(--muted); }
+.cal { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--card); }
+.calrow { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.calrow:last-child { border-bottom: 0; }
+.calrow .d { font-family: var(--mono); font-size: 14px; color: var(--gold); }
+.calrow b { display: block; }
+.budget { display: grid; gap: 8px; }
+.brow { display: grid; grid-template-columns: 130px minmax(0, 1fr) 90px; gap: 12px; align-items: center; font-size: 15px; }
+.bbar { height: 22px; border-radius: 4px; background: var(--gold-2); }
+.bbar.us { background: var(--us); }
+.brow .n { text-align: right; font-family: var(--mono); }
+.ask { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 10px; }
+.ask::before { content: "□"; font-size: 20px; line-height: 1.2; color: var(--gold); }
+.note { font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
+@media (max-width: 560px) { .calrow { grid-template-columns: 1fr; gap: 4px; } .brow { grid-template-columns: 96px minmax(0, 1fr) 70px; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="label">Twins Jewelry · Plan de campaña</div>
+    <h1>Diciembre: la recta final de Navidad</h1>
+    <div class="meta"><span>Del 1 al 24 de diciembre de 2026</span><span>Facebook, Instagram y WhatsApp</span><span>Preparado por LezaTech · 18 nov 2026</span></div>
+  </header>
+
+  <section id="resumen">
+    <p class="lead">Repetimos lo que ya funcionó en noviembre (cadenas con nombre, precio a la vista, mujeres de 35+), le sumamos una oferta concreta con fecha límite real y separamos Puerto Rico de EE. UU. para invertir donde de verdad se vende. La meta es llegar a unas <b class="num">2,000</b> conversaciones en 24 días sin pasar de <b class="num">$2.50</b> cada una, y por primera vez medir cuánto cuesta cada venta.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="v num">$5,000</div><div class="l">inversión total propuesta</div></div>
+      <div class="kpi"><div class="v num">~2,000</div><div class="l">conversaciones de WhatsApp esperadas</div></div>
+      <div class="kpi"><div class="v gold num">≤ $2.50</div><div class="l">costo por conversación</div></div>
+      <div class="kpi"><div class="v num">5 min</div><div class="l">tiempo de respuesta objetivo</div></div>
+    </div>
+  </section>
+
+  <section id="aprendizajes">
+    <div class="label">De dónde sale este plan</div>
+    <h2>Lo que aprendimos en noviembre y de la competencia</h2>
+    <div class="card" style="gap:16px">
+      <div class="learn"><div class="ix">1</div><div><b>"Con su nombre" es el mejor anuncio.</b> Trajo 427 de las 767 conversaciones, a $2.00 cada una. La cadena con nombre es lo que más se pide.</div></div>
+      <div class="learn"><div class="ix">2</div><div><b>El precio a la vista funciona, y casi nadie lo usa.</b> El reel que abre con el precio fue el segundo mejor ($2.60). De las joyerías de Miami que anuncian, solo el 6% pone un precio en el texto.</div></div>
+      <div class="learn"><div class="ix">3</div><div><b>La mejor oferta del mercado es un regalo concreto.</b> Revisamos los anuncios de las 100 joyerías con más reseñas de Miami-Dade y Broward. La oferta más fuerte es "compra una cadena y llévate una pulsera gratis" (VVS Jewelers). Los descuentos de "60% por tiempo limitado" que llevan años activos no convencen a nadie.</div></div>
+      <div class="learn"><div class="ix">4</div><div><b>Puerto Rico trae dos de cada tres conversaciones, y más baratas</b> ($2.16 contra $3.03). Falta saber si esas conversaciones terminan en venta.</div></div>
+      <div class="learn"><div class="ix">5</div><div><b>Quien escribe son mujeres de 35 años en adelante.</b> Las de 65+ salen a $1.66 por conversación. Los hombres escriben poco y cuestan más.</div></div>
+      <div class="learn"><div class="ix">6</div><div><b>El cuello de botella está después del anuncio.</b> La mitad de los clientes espera más de 2 horas y media por una respuesta, y casi ninguna venta queda registrada en el CRM.</div></div>
+      <div class="learn"><div class="ix">7</div><div><b>Casi ninguna joyería local compite en Facebook.</b> Solo 15 páginas del top 100 tienen anuncios activos. La más activa, Five Star, anuncia sobre todo compra de oro y préstamos, no regalos. El espacio de "regalos en oro con precio" está libre.</div></div>
+    </div>
+  </section>
+
+  <section id="oferta">
+    <div class="label">La oferta</div>
+    <h2>Un regalo concreto y una fecha que sí se cumple</h2>
+    <div class="offer">
+      <span class="pill">Propuesta</span>
+      <div class="big">Compra cualquier cadena o set y llévate un pulsito de regalo. Aparta hoy, paga en 3 meses y recíbelo antes de Navidad.</div>
+      <p class="muted">Junta lo que ya ofrece Twins (pulsito de regalo, apartado en 3 meses, envío gratis) en una sola frase, con una fecha límite real: el último día para pedir y recibir antes del 24. Esa fecha la tiene que confirmar Twins según el correo. Sin descuentos inflados: el precio se muestra tal cual.</p>
+    </div>
+  </section>
+
+  <section id="estructura">
+    <div class="label">Estructura y presupuesto</div>
+    <h2>Dos conjuntos: Puerto Rico y EE. UU., cada uno con su presupuesto</h2>
+    <p>Hoy todo va en un solo conjunto y Meta decide solo dónde gastar. Separarlo nos deja subir o bajar Puerto Rico según las ventas que confirme Twins, sin tocar Florida.</p>
+    <div class="tblwrap"><table>
+      <thead><tr><th>Conjunto</th><th>Público</th><th>Presupuesto diario</th><th>Por qué</th></tr></thead>
+      <tbody>
+        <tr><td><b>Puerto Rico</b></td><td>Toda la isla · 25 a 65+ · español · Advantage+</td><td><span class="num">$100 → $130</span></td><td>Las conversaciones más baratas. Sube en la segunda quincena solo si se confirman ventas.</td></tr>
+        <tr><td><b>EE. UU.</b></td><td>Todo el país, con Florida dentro · 25 a 65+ · español · Advantage+</td><td><span class="num">$100 → $120</span></td><td>Más caro por conversación, pero incluye a Miami, donde está la tienda.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="card budget" id="budget">
+      <h3>Cómo se reparte el dinero</h3>
+      <div class="brow"><span>1 – 14 dic</span><div style="display:flex;gap:2px"><div class="bbar" style="width:50%" title="Puerto Rico $1,400"></div><div class="bbar us" style="width:50%" title="EE. UU. $1,400"></div></div><span class="n">$2,800</span></div>
+      <div class="brow"><span>15 – 22 dic</span><div style="display:flex;gap:2px;width:71%"><div class="bbar" style="width:52%" title="Puerto Rico $1,040"></div><div class="bbar us" style="width:48%" title="EE. UU. $960"></div></div><span class="n">$2,000</span></div>
+      <div class="brow"><span>23 – 24 dic</span><div style="display:flex;gap:2px;width:7%"><div class="bbar" style="width:50%"></div><div class="bbar us" style="width:50%"></div></div><span class="n">$200</span></div>
+      <p class="muted" style="font-size:14px">Dorado: Puerto Rico · Azul: EE. UU. Del 1 al 14, $200 al día. Del 15 al 22, $250 al día, que es cuando más se compra. El 23 y 24, $100 al día para la recogida en tienda de última hora.</p>
+    </div>
+    <p class="muted" style="font-size:15px">A $2.50 por conversación, $5,000 dan unas 2,000 conversaciones, de 80 a 100 al día. Hoy el equipo recibe unas 65. Si no se puede atender ese volumen, es mejor quedarse en $150 al día que pagar por mensajes que nadie contesta.</p>
+  </section>
+
+  <section id="anuncios">
+    <div class="label">Los anuncios</div>
+    <h2>Seis anuncios: tres que ya sabemos que funcionan y tres pruebas</h2>
+    <div class="grid2">
+      <div class="card ad"><span class="pill keep">Se queda · ganador</span><div class="t">1 · Con su nombre (versión 2)</div><div class="hook">"Su nombre en oro real 10K. Desde $___, listo antes de Navidad."</div><div class="meta">Imagen 4:5 · la misma idea del ganador, con piezas nuevas y el precio en grande.</div></div>
+      <div class="card ad"><span class="pill keep">Se queda · ganador</span><div class="t">2 · Con su nombre en video</div><div class="hook">Las manos de la vendedora armando la cadena con el nombre, de cerca, en 15 segundos.</div><div class="meta">Reel 9:16 · mismo mensaje en movimiento, para Reels e Historias.</div></div>
+      <div class="card ad"><span class="pill keep">Se queda · nuevo corte</span><div class="t">3 · Reel con el precio primero</div><div class="hook">"$430. Dúo de anillos en tendencia, 10K." Precio en el primer segundo.</div><div class="meta">Reel 9:16 · igual que el reel A, con las piezas de la oferta nueva: dúo de anillos $430 y sets de $780 y $875.</div></div>
+      <div class="card ad"><span class="pill">Prueba · oferta</span><div class="t">4 · El pulsito de regalo</div><div class="hook">"Compra cualquier cadena o set y llévate un pulsito de regalo."</div><div class="meta">Imagen 4:5 · la mecánica que mejor funciona en la competencia, con fecha límite real.</div></div>
+      <div class="card ad"><span class="pill">Prueba · precio tope</span><div class="t">5 · Regalos por menos de $300</div><div class="hook">"Regalos en oro real por menos de $300." Cuatro piezas con su precio.</div><div class="meta">Carrusel estático · el formato que usan Kay y Zales, con oro real de Twins.</div></div>
+      <div class="card ad"><span class="pill">Prueba · facilidad</span><div class="t">6 · Aparta hoy, paga en 3 meses</div><div class="hook">"Apártalo hoy con un depósito y paga en 3 meses. Te lo enviamos gratis."</div><div class="meta">Imagen 4:5 · para quien quiere regalar algo mejor y no puede pagarlo de una vez.</div></div>
+    </div>
+    <div class="card" style="gap:8px">
+      <span class="pill drop">Se apagan</span>
+      <p>"Que no se pongan negras" ($3.63 por conversación) y la escalera de precios ($3.16). El carrusel animado se deja fuera porque Meta casi no lo mostró.</p>
+    </div>
+    <div class="card" style="gap:8px">
+      <h3>Reglas para todos los anuncios</h3>
+      <ul class="clean">
+        <li>Precio real a la vista en la imagen o en la primera línea.</li>
+        <li>"Oro real 10K / 14K" siempre visible: es lo que más preguntan.</li>
+        <li>El botón siempre lleva a WhatsApp, con un mensaje inicial que diga qué pieza vio la clienta.</li>
+        <li>Nada de urgencia falsa: la única fecha límite es la del envío antes de Navidad.</li>
+        <li>Fotos propias de la tienda y de manos reales, nada de bancos de imágenes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ventas">
+    <div class="label">Atención y ventas</div>
+    <h2>Que cada conversación tenga respuesta y resultado</h2>
+    <div class="grid3">
+      <div class="card"><h3>Responder en 5 minutos</h3><p>Turnos que cubran de 9 a. m. a 9 p. m., también sábado y domingo. Si llegan más de 90 conversaciones al día, hace falta una cuarta persona para diciembre.</p></div>
+      <div class="card"><h3>Respuestas listas</h3><p>Mensajes guardados en WhatsApp con precio, fotos y opciones de pago de las piezas de cada anuncio. Así la primera respuesta sale en segundos.</p></div>
+      <div class="card"><h3>Cada venta en el CRM</h3><p>Pasar cada cliente a "Cotización enviada", "Vendido" o "No interesado", y anotar el monto de la venta. Con eso medimos el costo por venta y qué anuncio vende más.</p></div>
+    </div>
+  </section>
+
+  <section id="medicion">
+    <div class="label">Cómo vamos a medir</div>
+    <h2>Metas y reglas de cada semana</h2>
+    <div class="tblwrap"><table>
+      <thead><tr><th>Qué medimos</th><th>Meta</th><th>Qué hacemos si no se cumple</th></tr></thead>
+      <tbody>
+        <tr><td>Costo por conversación</td><td><span class="num">≤ $2.50</span></td><td>Pausar el anuncio que pase de $4 después de gastar $40.</td></tr>
+        <tr><td>Conversaciones al día</td><td><span class="num">80–100</span></td><td>Si bajan, renovar la imagen del anuncio ganador.</td></tr>
+        <tr><td>Respuesta del equipo</td><td><span class="num">la mitad en ≤ 5 min</span></td><td>Bajar presupuesto hasta que el equipo pueda atender.</td></tr>
+        <tr><td>Clientes con su etapa marcada</td><td><span class="num">100%</span></td><td>Revisión diaria del CRM a final del día.</td></tr>
+        <tr><td>Costo por venta</td><td>Se fija con los datos de la primera semana</td><td>Mover presupuesto entre Puerto Rico y EE. UU. según dónde salga más barata la venta.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="muted" style="font-size:15px">Revisión cada lunes con un resumen corto para Twins: gasto, conversaciones, ventas marcadas y cambios de la semana.</p>
+  </section>
+
+  <section id="calendario">
+    <div class="label">Calendario</div>
+    <h2>De hoy al 24 de diciembre</h2>
+    <div class="cal">
+      <div class="calrow"><span class="d">19 – 24 nov</span><div><b>Preparación</b>Twins confirma la oferta, la fecha límite de envío y las ventas de Puerto Rico. LezaTech diseña los 6 anuncios y los textos.</div></div>
+      <div class="calrow"><span class="d">25 – 30 nov</span><div><b>Aprobación y montaje</b>Twins aprueba los anuncios. Se montan los dos conjuntos en pausa. La campaña actual sigue activa hasta el 30.</div></div>
+      <div class="calrow"><span class="d">1 dic</span><div><b>Lanzamiento</b>Se apaga la campaña de noviembre y se encienden los dos conjuntos nuevos a $200 al día.</div></div>
+      <div class="calrow"><span class="d">8 dic</span><div><b>Primera revisión</b>Se apagan las pruebas que no funcionan y se fija el costo por venta objetivo con lo que marque el CRM.</div></div>
+      <div class="calrow"><span class="d">15 dic</span><div><b>Empuje final</b>Presupuesto a $250 al día. El mensaje cambia a "última semana para recibirlo antes de Navidad".</div></div>
+      <div class="calrow"><span class="d">23 – 24 dic</span><div><b>Última hora</b>Presupuesto a $100 al día, con anuncios de recogida en tienda.</div></div>
+      <div class="calrow"><span class="d">26 dic</span><div><b>Reporte final</b>Resultados de la temporada completa y propuesta para el Día de Reyes y San Valentín.</div></div>
+    </div>
+  </section>
+
+  <section id="pendientes">
+    <div class="label">Lo que necesitamos de Twins</div>
+    <h2>Para lanzar el 1 de diciembre</h2>
+    <div class="card" style="gap:10px">
+      <div class="ask"><div><b>¿Se venden las conversaciones de Puerto Rico?</b> Cuántas ventas salieron de la isla en noviembre y si el envío y el pago funcionan bien allá.</div></div>
+      <div class="ask"><div><b>La fecha límite de envío</b> para que un pedido llegue antes del 24 de diciembre, a EE. UU. y a Puerto Rico.</div></div>
+      <div class="ask"><div><b>Aprobar la oferta del pulsito de regalo:</b> con qué piezas aplica y desde qué monto.</div></div>
+      <div class="ask"><div><b>Lista de precios</b> de 8 a 10 piezas para diciembre, incluyendo cadenas con nombre y regalos por menos de $300.</div></div>
+      <div class="ask"><div><b>Fotos y videos nuevos</b> de cadenas con nombre y de manos armando la pieza, para que el anuncio ganador no se canse.</div></div>
+      <div class="ask"><div><b>Equipo para diciembre:</b> horarios de las vendedoras y si se puede sumar una persona más.</div></div>
+    </div>
+  </section>
+
+  <div class="note">
+    <div>Basado en la campaña "Navidad 2026 · Regalos en oro real · WhatsApp" (5 al 18 de noviembre de 2026, Meta Ads), el CRM de Twins (5 al 16 de noviembre) y la revisión de anuncios activos de las 100 joyerías con más reseñas de Miami-Dade y Broward (18 de noviembre de 2026).</div>
+    <div>Las cifras esperadas son estimaciones con el costo actual por conversación. Diciembre suele ser más caro en Meta porque más negocios anuncian, por eso las revisamos cada semana.</div>
+  </div>
+</div>
+
+</html>
