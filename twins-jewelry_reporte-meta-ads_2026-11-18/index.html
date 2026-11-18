@@ -70,7 +70,7 @@ ol.steps li { counter-increment: s; display: grid; grid-template-columns: 40px m
 ol.steps li::before { content: counter(s); font-family: var(--display); font-size: 26px; color: var(--gold); line-height: 1.1; }
 ol.steps b { display: block; }
 .note { font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; display: grid; gap: 6px; }
-@media (max-width: 560px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .adrow { grid-template-columns: 22px minmax(0, 1fr) 80px; } .adrow .bar { grid-column: 2 / -1; } .kpi .v { font-size: 28px; } }
+@media (max-width: 560px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .adrow { grid-template-columns: 22px minmax(0, 1fr) 80px; } .adrow .rank, .adrow .name, .adrow > div:nth-child(2) { grid-row: 1; } .adrow .cost { grid-column: 3; grid-row: 1; } .adrow .bar { grid-column: 2 / -1; grid-row: 2; } .kpi .v { font-size: 28px; } }
 </style>
 
 <div class="wrap">
@@ -122,7 +122,7 @@ ol.steps b { display: block; }
         <span class="pill">Dónde</span>
         <div><span class="big num">65%</span> <span class="muted">de las conversaciones vienen de Puerto Rico</span></div>
         <div class="chartbox" id="geoBox"></div>
-        <p style="font-size:15px">En Puerto Rico cada conversación cuesta <b class="num">$2.16</b>; en el resto de EE. UU., <b class="num">$3.03</b>. Florida es el estado donde más se invierte dentro de EE. UU. ($209).</p>
+        <p style="font-size:15px">En Puerto Rico cada conversación cuesta <b class="num">$2.16</b>; en el resto de EE. UU., <b class="num">$3.03</b>. Florida es el estado donde más se invierte dentro de EE. UU. ($212).</p>
       </div>
       <div class="card">
         <span class="pill">Quién</span>
@@ -131,6 +131,14 @@ ol.steps b { display: block; }
         <p style="font-size:15px">Las mujeres de 65+ son las más baratas de todas: <b class="num">$1.66</b> por conversación. Los hombres escriben menos y cuestan más.</p>
       </div>
     </div>
+  </section>
+
+  <section id="lugares">
+    <div class="label">Por municipio y estado</div>
+    <h2>El área metro de San Juan y Florida se llevan un tercio de la inversión</h2>
+    <p>San Juan, Carolina, Bayamón, Guaynabo, Toa Baja, Trujillo Alto y Cataño suman el <b class="num">24%</b> de lo invertido. Fuera de la isla, Florida va primero (<b class="num">11%</b>), seguida de Texas, California y Nueva York, donde vive mucha diáspora puertorriqueña.</p>
+    <div class="card ads" id="placeList"></div>
+    <p class="muted" style="font-size:14px">Los 12 lugares con más inversión. Meta da la inversión y las personas alcanzadas por municipio y por estado, pero no cuántas conversaciones salen de cada uno.</p>
   </section>
 
   <section id="ventas">
@@ -154,7 +162,7 @@ ol.steps b { display: block; }
   </section>
 
   <div class="note">
-    <div>Datos de Meta Ads (cuenta Las Mellizas Joyería), campaña "Navidad 2026 · Regalos en oro real · WhatsApp", del 5 al 18 de noviembre de 2026. Una conversación es un chat de WhatsApp iniciado desde un anuncio. Meta no reporta conversaciones por ciudad, solo por país.</div>
+    <div>Datos de Meta Ads (cuenta Las Mellizas Joyería), campaña "Navidad 2026 · Regalos en oro real · WhatsApp", del 5 al 18 de noviembre de 2026. Una conversación es un chat de WhatsApp iniciado desde un anuncio. Meta no reporta conversaciones por ciudad, solo por país; por municipio y estado da la inversión y el alcance (datos del 18 nov por la tarde).</div>
     <div>Campañas anteriores: Interacción (jun 2025), Ventas (sep 2025) y las dos de enero 2026, con sus resultados totales según Meta.</div>
   </div>
 </div>
@@ -241,6 +249,27 @@ ol.steps b { display: block; }
     });
   }
 
+  const PLACES = [["Florida", "EE. UU.", 211.62, 5890], ["San Juan", "Puerto Rico", 198.54, 10948], ["Carolina", "Puerto Rico", 108.84, 7310],
+    ["Texas", "EE. UU.", 97.15, 3843], ["Bayamón", "Puerto Rico", 84.47, 5342], ["California", "EE. UU.", 67.48, 2541], ["Nueva York", "EE. UU.", 52.14, 1958],
+    ["Ponce", "Puerto Rico", 41.78, 3251], ["Nueva Jersey", "EE. UU.", 41.22, 1440], ["Caguas", "Puerto Rico", 40.64, 2810], ["Pensilvania", "EE. UU.", 24.92, 886],
+    ["Mayagüez", "Puerto Rico", 24.11, 2023]];
+  const PLACE_TOTAL = 1901.53;
+  function drawPlaces() {
+    const el = document.getElementById("placeList"); el.textContent = "";
+    const maxS = PLACES[0][2];
+    PLACES.forEach(([n, where, sp, reach], i) => {
+      const row = document.createElement("div"); row.className = "adrow";
+      const rank = document.createElement("div"); rank.className = "rank"; rank.textContent = i + 1;
+      const name = document.createElement("div"); const n1 = document.createElement("div"); n1.className = "name"; n1.textContent = n;
+      const n2 = document.createElement("div"); n2.className = "sub"; n2.textContent = `${where} · ${reach.toLocaleString("en-US")} personas alcanzadas`; name.append(n1, n2);
+      const bar = document.createElement("div"); bar.className = "bar"; const tr = document.createElement("div"); tr.className = "track"; const s1 = document.createElement("span");
+      s1.style.width = (sp / maxS * 100) + "%"; s1.style.background = where === "Puerto Rico" ? css("--gold") : css("--us"); tr.append(s1); bar.append(tr);
+      const cost = document.createElement("div"); cost.className = "cost"; const b = document.createElement("b"); b.textContent = "$" + Math.round(sp);
+      const sm = document.createElement("div"); sm.className = "sub"; sm.textContent = (sp / PLACE_TOTAL * 100).toFixed(1) + "% del total"; cost.append(b, sm);
+      row.append(rank, name, bar, cost); el.append(row);
+    });
+  }
+
   function drawGeo() {
     const box = document.getElementById("geoBox"); box.textContent = "";
     const W = box.clientWidth, H = 54, tot = 767, pr = 500;
@@ -281,7 +310,7 @@ ol.steps b { display: block; }
     });
   }
 
-  function all() { drawCmp(); drawDays(); drawAds(); drawGeo(); drawAges(); drawFunnel(); }
+  function all() { drawCmp(); drawDays(); drawAds(); drawGeo(); drawPlaces(); drawAges(); drawFunnel(); }
   all();
   let t; window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(all, 150); });
   if (window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener("change", all);
